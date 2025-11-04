@@ -185,11 +185,12 @@ a {
 /* Larger grid 3x4 */
 .menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 5fr 2fr 5fr 1fr;
+  grid-template-rows: 1fr 3fr 6fr 3fr 6fr 2fr;
+  justify-items: center;
 
   margin: 30px 300px;
-  padding: 30px;
+  /* max-height: 80dvh; */
 
   background-color: var(--beige-color);
   border: 11px solid var(--brown-color);
@@ -198,16 +199,50 @@ a {
 
 }
 
-.menu h1 {
-  grid-area: 1 / 2;
+/* Table within grid */
+hr {
+  border: 1px solid var(--oak-color);
+}
+
+th {
+  font-size: 2.5em;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+thead hr {
+  width: 100px;
+}
+
+td {
   text-align: center;
+  
+  font-size: 1.7em;
 }
 
-#menu1{
-  grid-area: 2 / 1;
+tbody hr {
+  border: none;
+  border-bottom: 1px solid var(--oak-color);
 }
 
+.menu h1 {
+  grid-area: 2 / 3;
+  font-size: 3.5em;
+  font-weight: 600;
+}
 
-.menu-section hr {
-  width: 50px;
+#menu1 {
+  grid-area: 3 / 2;
+}
+
+#menu2 {
+  grid-area: 3 / 4;
+}
+
+#menu3 {
+  grid-area: 5 / 2;
+}
+
+#menu4 {
+  grid-area: 5 / 4;
 }
