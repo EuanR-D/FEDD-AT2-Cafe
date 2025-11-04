@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Great+Vibes&display=swap');
+
 /* ############ Universal ############ */
 :root {
   --beige-color: #FFE9D3;
@@ -6,10 +8,16 @@
   --brown-color: #A96E55;
   --oak-color: #5E4036;
 }
+
+
+
 * {
   margin: 0;
+
+  font-family: 'Crimson Text', monospace;
   color: var(--oak-color);
 }
+
 
 .page-container {
   display: flex;
@@ -20,6 +28,7 @@
 /* NAVBAR  */
 .navbar .container {
   background-color: var(--beige-color);
+  
   overflow: auto;
   height: 86px;
 
@@ -43,8 +52,10 @@ a {
   margin-right: 10px
 }
 
-.logo-container h2 {
+.logo-container a {
   font-size: 2em;
+  font-family: 'Great Vibes', sans-serif;
+  font-weight: 400;
 }
 
 .navbar ul {
@@ -56,10 +67,11 @@ a {
   list-style: none;
 
   padding: 20px 30px;
-  font-size: 1.6em;
+  font-size: 1.7em;
 
   &:hover {
-    background-color: green;
+    background-color: var(--brown-color);
+    color: var(--bone-color);
   }
 }
 
@@ -93,6 +105,32 @@ a {
   color: var(--bone-color);
 }
 
+.hero-text h1 {
+  margin: 50px 0;
+  font-size: 3.8em;
+  font-weight: 600;
+}
+
+.hero-text p {
+  margin: 0 150px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.hero-text .button {
+  background-color: var(--bone-color);
+  margin-top: 10dvh;
+  padding: 0 50px;
+
+  font-size: 3em;
+  border-radius: 42px;
+  border: 6px solid var(--oak-color);
+
+  &:hover {
+    background-color: var(--oak-color);
+    color: var(--bone-color);
+  }
+}
 
 
 /* CONTENT */
