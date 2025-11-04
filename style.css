@@ -24,11 +24,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  background-color: var(--fern-color);
 }
 
 /* NAVBAR  */
 .navbar .container {
   background-color: var(--beige-color);
+  box-shadow: 0 4px 4px 0 var(--shadow);
   
   overflow: auto;
   height: 86px;
@@ -53,8 +55,8 @@ a {
   margin-right: 5px
 }
 
-.logo-container a {
-  font-size: 2em;
+.logo-container h2 {
+  font-size: 3em;
   font-family: 'Great Vibes', sans-serif;
   font-weight: 400;
 }
@@ -85,7 +87,7 @@ a {
 .hero {
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 4px 0 var(--shadow) inset;
+  
 
   background-image: url(./img/jonathan-borba-pIO8zFpgL_s-unsplash.jpg);
   min-height: 65dvh;
@@ -132,7 +134,7 @@ a {
 
   font-size: 2.7em;
   border-radius: 42px;
-  border: 4px solid var(--oak-color);
+  border: 6px solid var(--oak-color);
   box-shadow: 0 4px 4px 0 var(--shadow);
 
   &:hover {
@@ -142,7 +144,7 @@ a {
 }
 
 
-/* CONTENT */
+/* HOME CONTENT */
 .content {
   box-shadow: 0 4px 4px 0 var(--shadow) inset;
   background-color: var(--fern-color);
@@ -158,7 +160,7 @@ a {
 }
 
 .content img, .content-text {
-  border: 6px solid var(--brown-color);
+  border: 11px solid var(--brown-color);
   border-radius: 25px;
   box-shadow: 4px 8px 4px 0px var(--shadow);
 }
@@ -179,3 +181,33 @@ a {
   padding-bottom: 20px;
 }
 
+/* MENU */
+/* Larger grid 3x4 */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  margin: 30px 300px;
+  padding: 30px;
+
+  background-color: var(--beige-color);
+  border: 11px solid var(--brown-color);
+  border-radius: 25px;
+  box-shadow: 4px 8px 4px 0 var(--shadow);
+
+}
+
+.menu h1 {
+  grid-area: 1 / 2;
+  text-align: center;
+}
+
+#menu1{
+  grid-area: 2 / 1;
+}
+
+
+.menu-section hr {
+  width: 50px;
+}
