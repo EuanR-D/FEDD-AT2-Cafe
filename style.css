@@ -24,11 +24,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  background-color: var(--fern-color);
 }
 
 /* NAVBAR  */
 .navbar .container {
   background-color: var(--beige-color);
+  box-shadow: 0 4px 4px 0 var(--shadow);
   
   overflow: auto;
   height: 86px;
@@ -53,8 +55,8 @@ a {
   margin-right: 5px
 }
 
-.logo-container a {
-  font-size: 2em;
+.logo-container h2 {
+  font-size: 3em;
   font-family: 'Great Vibes', sans-serif;
   font-weight: 400;
 }
@@ -85,7 +87,7 @@ a {
 .hero {
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 4px 0 var(--shadow) inset;
+  
 
   background-image: url(./img/jonathan-borba-pIO8zFpgL_s-unsplash.jpg);
   min-height: 65dvh;
@@ -132,7 +134,7 @@ a {
 
   font-size: 2.7em;
   border-radius: 42px;
-  border: 4px solid var(--oak-color);
+  border: 6px solid var(--oak-color);
   box-shadow: 0 4px 4px 0 var(--shadow);
 
   &:hover {
@@ -142,7 +144,7 @@ a {
 }
 
 
-/* CONTENT */
+/* HOME CONTENT */
 .content {
   box-shadow: 0 4px 4px 0 var(--shadow) inset;
   background-color: var(--fern-color);
@@ -158,7 +160,7 @@ a {
 }
 
 .content img, .content-text {
-  border: 6px solid var(--brown-color);
+  border: 11px solid var(--brown-color);
   border-radius: 25px;
   box-shadow: 4px 8px 4px 0px var(--shadow);
 }
@@ -179,3 +181,68 @@ a {
   padding-bottom: 20px;
 }
 
+/* MENU */
+/* Larger grid 3x4 */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr 5fr 1fr;
+  grid-template-rows: 1fr 3fr 6fr 3fr 6fr 2fr;
+  justify-items: center;
+
+  margin: 30px 300px;
+  /* max-height: 80dvh; */
+
+  background-color: var(--beige-color);
+  border: 11px solid var(--brown-color);
+  border-radius: 25px;
+  box-shadow: 4px 8px 4px 0 var(--shadow);
+
+}
+
+/* Table within grid */
+hr {
+  border: 1px solid var(--oak-color);
+}
+
+th {
+  font-size: 2.5em;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+thead hr {
+  width: 100px;
+}
+
+td {
+  text-align: center;
+  
+  font-size: 1.7em;
+}
+
+tbody hr {
+  border: none;
+  border-bottom: 1px solid var(--oak-color);
+}
+
+.menu h1 {
+  grid-area: 2 / 3;
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+#menu1 {
+  grid-area: 3 / 2;
+}
+
+#menu2 {
+  grid-area: 3 / 4;
+}
+
+#menu3 {
+  grid-area: 5 / 2;
+}
+
+#menu4 {
+  grid-area: 5 / 4;
+}
