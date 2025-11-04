@@ -4,6 +4,7 @@
 :root {
   --beige-color: #FFE9D3;
   --bone-color: #FFF5E9;
+  --leaf-color: #AEDA93;
   --fern-color: #365E42;
   --brown-color: #A96E55;
   --oak-color: #5E4036;
@@ -296,4 +297,57 @@ tbody hr {
   font-size: 2em;
   text-align: center;
   padding-top: 5px;
+}
+
+
+
+/* Contact page */
+.contact {
+  margin: 30px 300px;
+}
+
+.contact h1 {
+  grid-area: 1 / 3;
+  font-size: 3.5em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name, #email, #message {
+  width: 25dvw;
+  height: 5dvh;
+  margin: 10px;
+
+  background-color: var(--bone-color);
+  border-width: 6px;
+  
+
+  &:placeholder {
+    font-family: 'Crimson Text', sans-serif;
+  }
+}
+
+
+
+.contact form button {
+  background-color: var(--leaf-color);
+  margin-top: 10dvh;
+  padding: 0 50px;
+
+  font-size: 2.3em;
+  border-radius: 42px;
+  border: 6px solid var(--fern-color);
+  color: var(--fern-color);
+  box-shadow: 0 4px 4px 0 var(--shadow);
+
+  &:hover {
+    background-color: var(--fern-color);
+    color: var(--leaf-color);
+  }
 }
