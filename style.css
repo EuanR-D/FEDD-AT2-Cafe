@@ -302,7 +302,6 @@ tbody hr {
 }
 
 .menu h1 {
-  
   font-weight: 600;
 }
 
@@ -314,7 +313,7 @@ tbody hr {
     margin: 2dvh 5dvw;
   }
   .menu h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     grid-area: 1 / 2;
   }
   #menu1 {
@@ -328,6 +327,13 @@ tbody hr {
   }
   #menu4 {
     grid-area: 9 / 2;
+  }
+
+  th {
+    font-size: 1.7em;
+  }
+  td {
+    font-size: 1.4em;
   }
 }
 /* Tablet */
