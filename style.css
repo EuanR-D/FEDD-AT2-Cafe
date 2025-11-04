@@ -1,6 +1,14 @@
-/* ENTIRE PAGE */
+/* ############ Universal ############ */
+:root {
+  --beige-color: #FFE9D3;
+  --bone-color: #FFF5E9;
+  --fern-color: #365E42;
+  --brown-color: #A96E55;
+  --oak-color: #5E4036;
+}
 * {
   margin: 0;
+  color: var(--oak-color);
 }
 
 .page-container {
@@ -11,7 +19,7 @@
 
 /* NAVBAR  */
 .navbar .container {
-  background-color: red;
+  background-color: var(--beige-color);
   overflow: auto;
   height: 86px;
 
@@ -56,5 +64,40 @@ a {
 }
 
 /* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+
+  background-image: url(./img/jonathan-borba-pIO8zFpgL_s-unsplash.jpg);
+  min-height: 65dvh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .container {
+  background-color: hsl(from var(--fern-color) h s l / 80%);
+  border-radius: 25px;
+  max-width: 47dvw;
+  margin: 30px 0;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.hero-text h1, .hero-text p {
+  color: var(--bone-color);
+}
+
+
 
 /* CONTENT */
+.content {
+  display: flex;
+  background-color: var(--fern-color);
+}
+
