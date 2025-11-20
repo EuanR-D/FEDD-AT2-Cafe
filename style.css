@@ -177,6 +177,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   
 }
 
@@ -185,9 +186,11 @@ a {
 }
 
 .hero-text h1 {
-  margin: 50px 0;
+  margin: 40px 0px;
   font-size: 3.8em;
   font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .hero-text p {
@@ -198,8 +201,9 @@ a {
 
 .hero-text .button {
   background-color: var(--bone-color);
-  margin-top: 10dvh;
+  justify-self: center;
   padding: 0 50px;
+  margin: 7dvh 0;
 
   font-size: 2.7em;
   border-radius: 42px;
@@ -279,6 +283,7 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 th {
@@ -287,17 +292,22 @@ th {
 }
 
 thead hr {
-  width: 100px;
+  width: 80px;
 }
 
 td {
   padding: 0 5px;
 }
 
+tbody {
+  max-width: 90%;
+}
+
 tbody hr {
-  border: none;
-  border-bottom: 1px solid var(--oak-color);
-  width: 75px;
+  visibility: hidden;
+  /* border: none; */
+  /* border-bottom: 1px solid var(--oak-color); */
+  width: 80px;
   
 }
 
@@ -305,12 +315,18 @@ tbody hr {
   font-weight: 600;
 }
 
+.menu tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* Mobile */
 @media (max-width: 480px) {
   .menu {
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 0fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr;
-    margin: 2dvh 5dvw;
+    grid-template-columns: 0fr 3fr 0fr;
+    grid-template-rows: 1fr 0fr 2fr 0.5fr 2fr 0.5fr 2fr 0fr 2fr 0.5fr;
+    margin: 2dvh 4dvw;
   }
   .menu h1 {
     font-size: 2.5em;
@@ -422,9 +438,15 @@ tbody hr {
   grid-area: 3 / 2;
 }
 
+.img-container {
+    display: flex;
+    justify-content: center;
+    grid-area: 3 / 4;
+}
+
 #map-img {
-  grid-area: 3 / 4;
   width: 100%;
+  border-radius: 11px;
 }
 
 .address {
@@ -432,6 +454,48 @@ tbody hr {
   font-size: 2em;
   text-align: center;
   padding-top: 5px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .location {
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 0.5fr 2fr 0.3fr 2fr 1fr ;
+
+    margin: 2dvh 4dvw;
+  }
+
+  .location h1 {
+    font-size: 2.5em;
+    grid-area: 1 / 2;
+  }
+
+  .business-hours {
+    grid-area: 2 / 2;
+  }
+  .business-hours th hr {
+    width: 80px;
+  }
+  .business-hours td hr {
+    width: 50px;
+  }
+
+  .img-container {
+    grid-area: 4 / 2;
+    width: 100%;
+    overflow: hidden;
+  }
+  .background #map-container {
+    border: 5px solid var(--brown-color);
+  }
+  #map-img {
+    transform: scale(1.5, 1.5);
+  }
+
+  .address {
+    grid-area: 5 / 2;
+    font-size: 1.7em;
+  }
 }
 
 
