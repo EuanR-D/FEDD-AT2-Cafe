@@ -310,7 +310,7 @@ tbody hr {
   .menu {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 0fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr;
-    margin: 2dvh 5dvw;
+    margin: 2dvh 4dvw;
   }
   .menu h1 {
     font-size: 2.5em;
@@ -422,9 +422,15 @@ tbody hr {
   grid-area: 3 / 2;
 }
 
+.img-container {
+    display: flex;
+    justify-content: center;
+    grid-area: 3 / 4;
+}
+
 #map-img {
-  grid-area: 3 / 4;
   width: 100%;
+  border-radius: 11px;
 }
 
 .address {
@@ -432,6 +438,48 @@ tbody hr {
   font-size: 2em;
   text-align: center;
   padding-top: 5px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .location {
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 0.5fr 2fr 0.3fr 2fr 1fr ;
+
+    margin: 2dvh 4dvw;
+  }
+
+  .location h1 {
+    font-size: 2.5em;
+    grid-area: 1 / 2;
+  }
+
+  .business-hours {
+    grid-area: 2 / 2;
+  }
+  .business-hours th hr {
+    width: 80px;
+  }
+  .business-hours td hr {
+    width: 50px;
+  }
+
+  .img-container {
+    grid-area: 4 / 2;
+    width: 100%;
+    overflow: hidden;
+  }
+  .background #map-container {
+    border: 5px solid var(--brown-color);
+  }
+  #map-img {
+    transform: scale(1.5, 1.5);
+  }
+
+  .address {
+    grid-area: 5 / 2;
+    font-size: 1.7em;
+  }
 }
 
 
